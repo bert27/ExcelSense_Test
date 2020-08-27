@@ -6,6 +6,7 @@ import './Entities.css';
     super(props);
     this.state = {
       data:[],
+      spinner:<div className="Spinner"></div>,
     };
   }
     componentDidMount(){
@@ -27,7 +28,11 @@ import './Entities.css';
 }
   render() {
     var Lista=this.state.data;
-    var ListaDesglosada=Object.keys(Lista).map((item,i) =>
+    var ListaDesglosada=null;
+    if(Lista==[]){
+      ListaDesglosada=this.state.spinner;
+    }else{
+    ListaDesglosada=Object.keys(Lista).map((item,i) =>
     <div key={i} className="Tarjet">
       <div className="element_tarjet_child">
       {Lista[item].id}
@@ -61,11 +66,12 @@ import './Entities.css';
       </div>
     </div>
   );
+}
     return (
   <div className="FirstPage">
-  <div className="Title">Entities:</div>
-  {ListaDesglosada}
-
+    <div className="Title">Entities:</div>
+ {ListaDesglosada}
+{/*{this.state.spinner}*/}
 
 
   </div>

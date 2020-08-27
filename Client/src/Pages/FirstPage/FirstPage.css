@@ -2,8 +2,20 @@
   display: flex;
   width: 100%;
   height: auto;
-  font-size: larger;
+  font-size: 28px;
 justify-content: center;
+padding: 2%;
+font-weight: 800;
+text-decoration: underline;
+
+}
+
+.Spinner{
+  display: flex;
+  background: #3a8fb738;
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
 }
 .FirstPage{
   width: 100%;
@@ -68,7 +80,9 @@ justify-content: center;
   color: white;
   text-shadow: 0 0 11px black;
   border: 0;
-  font-size: calc(6px + 2vmin)
+  font-size: calc(6px + 2vmin);
+  text-decoration: none;
+  font-weight: 500;
 }
 
 
@@ -105,5 +119,8 @@ justify-content: center;
 @media (max-width: 480px){
   .Tarjet{
     width: 44%;
+  }
+  .Button{
+    width: 14vh;
   }
 }
