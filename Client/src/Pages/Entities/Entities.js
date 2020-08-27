@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from './logo.svg';
+import EntitiesCard from '../../Components/EntitiesCard';
 import './Entities.css';
   class Entities extends React.Component {
     constructor(props) {
@@ -32,40 +32,7 @@ import './Entities.css';
     if(Lista==[]){
       ListaDesglosada=this.state.spinner;
     }else{
-    ListaDesglosada=Object.keys(Lista).map((item,i) =>
-    <div key={i} className="Tarjet">
-      <div className="element_tarjet_child">
-      {Lista[item].id}
-      </div>
-      <div className="element_tarjet_child">
-      {Lista[item].d_bp_vacancy_compensation_payment_first_date}
-      </div>
-      <div className="element_tarjet_child">
-      {Lista[item].d_bp_vacancy_expected_date}
-      </div>
-      <div className="element_tarjet_child">
-      {Lista[item].d_entry_contract_date_end}
-      </div>
-      <div className="element_tarjet_child">
-      {Lista[item].d_exit_construction_end}
-      </div>
-      <div className="element_tarjet_child">
-      {Lista[item].d_exit_construction_reception}
-      </div>
-      <div className="element_tarjet_child">
-      {Lista[item].d_exit_construction_start}
-      </div>
-      <div className="element_tarjet_child">
-      {Lista[item].d_exit_market_start}
-      </div>
-      <div className="element_tarjet_child">
-      {Lista[item].d_exit_rented_date}
-      </div>
-      <div className="element_tarjet_child">
-      {Lista[item].d_exit_transfer_asset_to_am}
-      </div>
-    </div>
-  );
+    ListaDesglosada=<EntitiesCard data={this.state.data}/>;
 }
     return (
   <div className="FirstPage">

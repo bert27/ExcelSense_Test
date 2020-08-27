@@ -1,0 +1,115 @@
+$Color_Primario: rgb(31,208,182)
+
+$Color_Button_Hover: #89b0ae
+$Color_Letras: black
+$Color_Shadows: rgb(51,57,61)
+$Color_Secundario: white
+$Color_Background: rgb(51,57,61)
+
+.svg_ico
+  fill: $Color_Primario
+  width: 11%
+.Title
+  display: flex
+  width: 100%
+  height: auto
+  font-size: 28px
+  justify-content: center
+  padding: 2%
+  font-weight: 800
+  text-decoration: underline
+  color: white
+.Spinner
+  display: flex
+  background: $Color_Primario
+  width: 100%
+  height: auto
+  min-height: 100vh
+.FirstPage
+  width: 100%
+  background: $Color_Background
+  height: auto
+  display: flex
+  flex-direction: row
+  color: $Color_Letras
+  text-shadow: 0 0 5px $Color_Shadows
+  flex-wrap: wrap
+  font-size: calc(6px + 2vmin)
+  text-align: end
+.Tarjet
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  padding: 1%
+  background: $Color_Secundario
+  margin: 2%
+  width: 18%
+  height: auto
+  box-shadow: inset 0 0 4px $Color_Shadows
+  border-radius: 7px
+.element_tarjet
+  width: 100%
+  height: auto
+  display: flex
+  flex-wrap: wrap
+  justify-content: flex-end
+.element_tarjet_child
+  margin-left: 2%
+.ButtonSpace
+  display: flex
+  width: 100%
+  height: auto
+  justify-content: center
+  padding: 2%
+.Button:hover
+  background-color: $Color_Button_Hover
+.Button
+  display: flex
+  width: 17vw
+  background-color: $Color_Primario
+  border-radius: 7px
+  cursor: pointer
+  padding: 4%
+  text-align: center
+  align-items: center
+  justify-content: center
+  white-space: nowrap
+  margin: 2%
+  color: white
+  text-shadow: 0 0 11px $Color_Shadows
+  border: 0
+  font-size: calc(6px + 2vmin)
+  text-decoration: none
+  font-weight: 500
+
+@media (prefers-reduced-motion: no-preference)
+  .FirstPage-logo
+    animation: FirstPage-logo-spin infinite 20s linear
+  .FirstPage-header
+    background-color: #282c34
+    min-height: 100vh
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    font-size: calc(10px + 2vmin)
+    color: $Color_Letras
+  .FirstPage-link
+    color: $Color_Primario
+
+
+@keyframes FirstPage-logo-spin
+  from
+    transform: rotate(0deg)
+  to
+    transform: rotate(360deg)
+
+
+/*MVL*/
+@media (max-width: 480px)
+  .Tarjet
+    width: 44%
+  .Button
+    width: 14vh
+  .svg_ico
+    width: 20%

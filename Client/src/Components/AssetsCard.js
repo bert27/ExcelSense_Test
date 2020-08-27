@@ -1,11 +1,14 @@
 import React from "react";
 import { Link } from 'react-router-dom';
-
+import {ReactComponent as IconMap}  from './map.svg';
 export default function AssetsCard(props) {
   var Lista=props.data;
-  
+
   var ListaDesglosada=Object.keys(Lista).map((item,i) =>
   <div key={i} className="Tarjet">
+
+  <IconMap
+className="svg_ico"/>
   <div className="element_tarjet">
   {Lista[item].id}
   </div>

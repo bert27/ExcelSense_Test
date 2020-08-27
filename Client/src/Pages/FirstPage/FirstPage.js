@@ -1,6 +1,7 @@
 import React from 'react';
-import './FirstPage.css';
+import './FirstPage.sass';
 import AssetsCard from '../../Components/AssetsCard';
+
 class FirstPage extends React.Component {
   constructor(props) {
   super(props);
