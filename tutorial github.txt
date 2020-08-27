@@ -1,0 +1,6 @@
+git init
+
+git status
+
+//agrega todo
+git add -A
