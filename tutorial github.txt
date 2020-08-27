@@ -1,6 +1,17 @@
 git init
 
+git config --global user.name "Bert27"
+
 git status
 
 //agrega todo
 git add -A
+
+
+git remote add origin git@github.com:bert27/ExcelSense
+
+git commit -m 'v0.1'
+
+git push -u origin master
+
+ssh-keygen -t rsa -b 4096 -C "zzopp@hotmail.com"
