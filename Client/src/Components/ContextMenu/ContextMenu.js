@@ -13,7 +13,7 @@ class ContextMenu extends React.Component {
       open: false
     };
   }
-  componentWillUnmount() {
+componentWillUnmount() {
     document.removeEventListener('click', this.handleClickOutside);
     document.removeEventListener('contextmenu', this.handleRightClickOutside);
 }
