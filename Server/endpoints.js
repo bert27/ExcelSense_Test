@@ -10,17 +10,16 @@ module.exports.servidor = {
 	 app: app,
 	express: express,
 
-
-Arranca: function() {
+Start: function() {
 const port=4000;
 app.listen(port,'0.0.0.0', () =>
  console.log('Server Start'.cyan));
 },
 Entities: function() {
+  //Forward Data from the endpoint to the react client
 var url='https://6y458uslg3.execute​-api.eu-west-3.amazonaws.com/elixos/entities';
-
     app.get('/endpoints/Entities', (req, res) => {
-    console.log("Enviando Entities");
+    console.log("Send Entities");
     fetch(url)
       .then(res => res.json())
       .then(json =>
@@ -30,11 +29,10 @@ var url='https://6y458uslg3.execute​-api.eu-west-3.amazonaws.com/elixos/entiti
 
 },
 Assets: function() {
-// console.log('Excel Sense'.cyan);
+  //Forward Data from the endpoint to the react client
 var url='https://6y458uslg3.execute-api.eu-west-3.amazonaws.com/elixos/assets';
-
     app.get('/endpoints/Assets', (req, res) => {
-    console.log("Enviando Assets");
+    console.log("Send Assets");
     fetch(url)
       .then(res => res.json())
       .then(json =>
@@ -42,7 +40,5 @@ var url='https://6y458uslg3.execute-api.eu-west-3.amazonaws.com/elixos/assets';
        );
   });
 },
-
-
 
 };

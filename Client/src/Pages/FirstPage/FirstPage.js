@@ -1,25 +1,19 @@
 import React from 'react';
-import './FirstPage.sass';
-import AssetsCard from '../../Components/AssetsCard';
+import '../../index.sass';
+import AssetsCard from '../../Components/AssetsCard/AssetsCard';
+import Spinner from '../../Components/Spinner/Spinner';
 
+//While fetching data a loading animation is shown
 class FirstPage extends React.Component {
   constructor(props) {
   super(props);
   this.state = {
-    data:[],
+    data:<Spinner/>,
+    change: 0,
   };
 }
-componentDidMount(){
-console.log("Iniciando:");
-this.GetData('/endpoints/Assets');
-      }
-    SetData(data){
-    console.log('This is your data', data.assets);
-    this.setState({
-      data: data.assets,
-    });
+    componentDidMount(){this.GetData('/endpoints/Assets');}
 
-      };
     GetData(url){
     const apiUrl = url;
     fetch(apiUrl)
@@ -28,14 +22,19 @@ this.GetData('/endpoints/Assets');
       this.SetData(data)
     );
     }
+    SetData(data){
+          this.setState({
+            data: data.assets,
+            change: 1,
+          });
+      };
 
 render() {
-var Lista=<AssetsCard data={this.state.data}/>;
-
   return (
 <div className="FirstPage">
-<div className="Title">Assets:</div>
-{Lista}
+    <div className="Title">Assets:</div>
+    <AssetsCard data={this.state.data}
+     change={this.state.change}/>
 </div>
         );
 }

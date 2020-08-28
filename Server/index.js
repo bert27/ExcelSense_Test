@@ -1,6 +1,6 @@
 const endpoints = require('./endpoints');
 
 
-endpoints.servidor.Arranca();
+endpoints.servidor.Start();
 endpoints.servidor.Assets();
 endpoints.servidor.Entities();
