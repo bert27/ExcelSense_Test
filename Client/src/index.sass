@@ -6,13 +6,20 @@ $Color_Button_Hover: rgb(5,81,107)
 $Color_Letras: white
 $Color_Shadows: rgb(51,57,61)
 $Color_Secundario: rgb(1,123,137)
-
 $Color_Background: rgb(94,112,72)
 
 //$Color_Background: rgb(51,57,61)
 .svg_ico
+  height: auto
+  fill: rgb(211,147,37)
+  width: 16%
+.svg_ico_Dropdown
+  height: auto
   fill: rgb(211,147,37)
   width: 11%
+  cursor: pointer
+.svg_ico_Dropdown:hover
+  fill: $Color_Button_Hover
 .Title
   display: flex
   width: 100%
@@ -46,25 +53,32 @@ $Color_Background: rgb(94,112,72)
   text-align: end
   min-height: 100vh
 
-.Tarjet
-  display: flex
+.Card_Asset
+  //display: flex
   flex-direction: column
   justify-content: space-between
   background: $Color_Secundario
   margin: 2%
   width: 17%
-  height: auto
+  height: 100%
   box-shadow: inset 0 0 4px $Color_Shadows
   border-radius: 7px
   padding: 2%
-.element_tarjet
+.element_targetC
+  width: 100%
+  height: auto
+  display: flex
+  justify-content: space-between
+.element_target
   width: 100%
   height: auto
   display: flex
   flex-wrap: wrap
   justify-content: flex-end
-.element_tarjet_child
+.element_target_child
   margin-left: 2%
+
+
 .ButtonSpace
   display: flex
   width: 100%
@@ -117,12 +131,14 @@ $Color_Background: rgb(94,112,72)
 
 /*MVL*/
 @media (max-width: 480px)
-  .Tarjet
+  .Card_Asset
     width: 42%
   .Button
     width: 14vh
   .svg_ico
     width: 20%
+  .svg_ico_Dropdown
+    width: 14%
   .Title
     min-height: 10vh
     align-items: center

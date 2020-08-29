@@ -1,11 +1,8 @@
 import React from 'react';
 import './ContextMenu.sass';
 import ReactDOM from 'react-dom';
-
+import DataCard from './DataCard';
 class ContextMenu extends React.Component {
-  static defaultProps = {
-    buttons: []
-  };
 
   constructor() {
     super();
@@ -13,6 +10,7 @@ class ContextMenu extends React.Component {
       open: false
     };
   }
+
 componentWillUnmount() {
     document.removeEventListener('click', this.handleClickOutside);
     document.removeEventListener('contextmenu', this.handleRightClickOutside);
@@ -66,42 +64,44 @@ const isInContext = !context.contains(e.target);
 
   render() {
     return (
-      <div className="Tarjet"
+      <div className="Card_Entitie"
         onContextMenu={this.handleRightClick}
-        ref={(node) => this.div = node}
-      >
+        ref={(node) => this.div = node}>
         {this.props.children}
-
-        {
-          !this.state.open
-          ? null
+          <DataCard
+          item={this.props.item}
+          List={this.props.List}/>
+        {//If state open different null: show MenuDropdown
+          !this.state.open? null
           : <div
               className="menu"
               ref={(div) => this.context = div}
-              style={{ top: this.state.top, left: this.state.left }}
-          >
+              style={{ top: this.state.top, left: this.state.left }}>
               <div>
-    {
-                  // button - name, onClick, label
-      this.props.buttons.length > 0 &&
-      this.props.buttons.map((button) => {
-      return <div className="menu_element" key={button.label}>
-      <div
-      className="menu_elementC"
-      onClick={button.onClick}>
-
-      {button.label}
-        </div>
-        <div className="line">
-        </div>
-      </div>
-                  })
-                }
+      {//Dropdown Menu in Page Entities:
+        this.props.MenuDropdown.length > 0 &&
+      this.props.MenuDropdown.map((button) => {
+        return Menu_dropdown(button);
+                  })}
               </div>
           </div>
         }
       </div>
     );
   }
+
 }
+
+function Menu_dropdown(button) {
+  return (
+  <div className="menu_element" key={button.label}>
+    <div
+    className="menu_elementC"
+    onClick={button.onClick}>
+    {button.label}
+    </div>
+    <div className="line"></div>
+  </div>);
+}
+
   export default ContextMenu;

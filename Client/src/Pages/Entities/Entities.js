@@ -28,18 +28,18 @@ class Entities extends React.Component {
     });
 }
   render() {
-    var Lista=this.state.data;
-    var ListaDesglosada=null;
-    if(Lista===""){
-      ListaDesglosada=<Spinner/>;
+    var List=this.state.data;
+    var MapOfList=null;
+    if(List===""){
+      MapOfList=<Spinner/>;
     }else{
-    ListaDesglosada=<EntitiesCard
+    MapOfList=<EntitiesCard
      data={this.state.data}/>;
 }
     return (
   <div className="FirstPage">
       <div className="Title">Entities:</div>
-      {ListaDesglosada}
+      {MapOfList}
   </div>
           );
       }
