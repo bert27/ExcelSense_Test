@@ -61,7 +61,7 @@ class DataCard extends React.Component {
   var Exit=this.state.Exit;
   var Direction=this.state.Direction;
   var Work=this.state.Work;
-     return (
+      return (
   <>
 
   <div className="element_target_childE">
