@@ -10,7 +10,7 @@ class ContextMenu extends React.Component {
       open: false
     };
   }
-/*
+
 componentWillUnmount() {
     document.removeEventListener('click', this.handleClickOutside);
     document.removeEventListener('contextmenu', this.handleRightClickOutside);
@@ -61,7 +61,7 @@ const isInContext = !context.contains(e.target);
       left: e.nativeEvent.clientX,
     });
   }
-*/
+
   render() {
     return (
       <div className="Card_Entitie"
