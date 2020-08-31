@@ -1,39 +1,77 @@
 $Color_Shadows: rgb(51,57,61)
 $Color_Secundario: rgb(1,123,137)
-.element_target_group
-  border: 1px solid #f4c13c
-  box-shadow: 0 0 8px #f4c13c
-  display: flex
-  flex-direction: row
-  flex-wrap: wrap
-  justify-content: center
-  align-content: center
-  margin-top: 9%
-.element_target_group_title
-  color: #f4c13c
-  font-size: 3vw
-  font-weight: 700
-  display: flex
-  justify-content: space-between
-  padding: 2%
+
 .Card_Entitie
   display: flex
   flex-direction: row
   flex-wrap: wrap
   justify-content: space-between
   background: $Color_Secundario
-  margin: 2%
-  width: 17%
+  width: 46%
   height: 100%
+  min-height: 20vw
   box-shadow: inset 0 0 4px $Color_Shadows
   border-radius: 7px
-  padding: 2%
-.element_target_childE
-  margin-left: 2%
+  margin: 1%
+  padding: 1%
+.wraptext
   display: flex
-  width: 92%
-  justify-content: flex-end
+  white-space: pre-wrap
+  text-align: justify
+.svg_ico_Person
+  height: auto
+  fill: rgb(211,147,37)
+  width: 20%
+  cursor: pointer
+.element_target_group
+  display: flex
+  width: 100%
+  flex-direction: row
+  flex-wrap: wrap
+  justify-content: center
+  align-content: center
+  margin-top: 3%
+  border: 1px solid #f4c13c
+  box-shadow: 0 0 8px #f4c13c
+.Column1_Hidden
+  display: flex
+  flex-direction: column
+  width: auto
+  height: auto
+  padding: 2%
+.Content_Hidden
+  display: flex
+  width: 100%
+  height: auto
+  justify-content: space-around
+  align-items: inherit
+.element_target_group_title
+  color: #f4c13c
+  font-size: 3vw
+  font-weight: 700
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 2%
+
+.element_target_Description
+  display: flex
+  width: 100%
+  justify-content: space-between
+  flex-direction: column
+  padding: 2%
+.element_target_DescriptionC
+  display: flex
+  width: 100%
+  justify-content: space-between
+.element_target_childE
+  display: flex
+  width: 100%
+  align-items: baseline
+  flex-direction: column
+  padding: 2%
+  white-space: nowrap
 /*MVL*/
 @media (max-width: 480px)
   .Card_Entitie
-    width: 42%
+    width: 45%
