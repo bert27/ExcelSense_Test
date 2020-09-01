@@ -1,9 +1,8 @@
 import React from "react";
 import {ReactComponent as IconDropdown}  from './dropdown.svg';
+//Component dropdown:
 class AddFile extends React.Component {
-
   Add_Asset(){
-    console.log("Add new file");
     this.props.ShowInputAdd(this.props.ID);
   }
   render() {

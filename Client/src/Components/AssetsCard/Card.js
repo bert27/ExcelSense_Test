@@ -9,12 +9,9 @@ class Card extends React.Component {
   this.state = {
     InputState:"",
     NewRows:"",
-
   };
 }
 AddRow(value){
-  console.log("Mostrando valor: " + value);
-
   if(this.state.NewRows==""){
     var newrow=[];
     newrow.push(value);
@@ -36,7 +33,6 @@ AddRow(value){
 
 }
   ShowInputAdd(ID){
-    console.log("Show3 input: " + ID);
     if(this.state.InputState===""){
       this.setState({
         InputState:<InputFile
@@ -62,66 +58,66 @@ AddRow(value){
     <div key={i}>
       {this.state.NewRows[item]}
     </div>);
-    
+
          return (
          <>
 
-             <div className="element_targetC">
+         <div className="element_targetC">
                  <IconMap className="svg_ico"/>
                  <div >
                  {Lista[item].id}
                  </div>
-             </div>
+         </div>
 
-             <div className="element_target">
+         <div className="element_target">
                  <div className="element_target_child">
                  Street:
                  </div>
                  <div className="element_target_child">
                  {Lista[item].t_street_name}
                  </div>
-             </div>
+         </div>
 
-             <div className="element_target">
+         <div className="element_target">
                    <div className="element_target_child">
                    Number:
                    </div>
                    <div className="element_target_child">
                     {Lista[item].n_number}
                    </div>
-             </div>
+         </div>
 
-             <div className="element_target">
+         <div className="element_target">
                    <div className="element_target_child">
                    City:
                    </div>
                    <div className="element_target_child">
                     {Lista[item].t_city}
                    </div>
-             </div>
+         </div>
 
          <div className="element_targetC">
              <AddFile
              ShowInputAdd={this.ShowInputAdd.bind(this)}
              ID={Lista[item].id}/>
              <div className="element_target_child">
-                   Code:
-                   <div className="element_target_child">
-                   {Lista[item].t_code}
-                   </div>
+                 Code:
+                 <div className="element_target_child">
+                 {Lista[item].t_code}
+                 </div>
              </div>
-       </div>
-        <div>
+         </div>
+         <div>
               {MapofNewRows}
               {this.state.InputState}
 
-        </div>
+         </div>
 
-             <div className="ButtonSpace">
+         <div className="ButtonSpace">
                <Link className="Button" to={"/Entities"}>
                Entities
                </Link>
-             </div>
+         </div>
 
          </>
 );

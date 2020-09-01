@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import Card from './Card';
 class AssetsCard extends React.Component {
 
-
   render() {
   var Lista=this.props.data;
   var ListaDesglosada="";
@@ -18,8 +17,8 @@ class AssetsCard extends React.Component {
     </div>
          );
        }
-       else{
-         ListaDesglosada=Lista;
+  else{
+    ListaDesglosada=Lista;
        }
 
          return (

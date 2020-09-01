@@ -2,7 +2,6 @@ import React from 'react';
 import '../../index.sass';
 import AssetsCard from '../../Components/AssetsCard/AssetsCard';
 import Spinner from '../../Components/Spinner/Spinner';
-
 //While fetching data a loading animation is shown
 class FirstPage extends React.Component {
   constructor(props) {
